@@ -99,6 +99,7 @@ easy_admin:
                               {
                                   upload_dir: "public_html/uploads/images/products",
                                   upload_filename: "[name].[extension]",
+                                  download_path: "/uploads/images/products/",
                                   allow_delete: true,
                               },
                       }
