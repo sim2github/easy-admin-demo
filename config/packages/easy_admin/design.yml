@@ -9,8 +9,8 @@
 # The configuration options are explained in detail in the bundle documentation,
 # which is published at https://github.com/javiereguiluz/EasyAdminBundle
 easy_admin:
-    site_name: 'ACME Backend'
+    site_name: "ACME Backend"
     design:
         assets:
             css:
-                - '/bundles/app/stylesheets/demo.css'
+                # - "/bundles/app/stylesheets/demo.css"

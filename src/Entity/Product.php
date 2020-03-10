@@ -70,21 +70,11 @@ class Product
     /**
      * It only stores the name of the image associated with the product.
      *
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      *
-     * @var string
+     * @var string|UploadedFile|null
      */
     private $image;
-
-    /**
-     * This unmapped property stores the binary contents of the image file
-     * associated with the product.
-     *
-     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
-     *
-     * @var File
-     */
-    private $imageFile;
 
     /**
      * Features of the product.

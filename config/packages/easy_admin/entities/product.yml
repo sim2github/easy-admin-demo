@@ -14,47 +14,91 @@ easy_admin:
         # can be the configuration of your backend
         Product:
             class: App\Entity\Product
-            label: 'Products'
+            label: "Products"
             list:
                 fields:
                     - id
                     - enabled
                     - name
-                    - { property: 'price', format: '%.2f', css_class: text-right }
-                    - { property: 'ean', type: 'string' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
-                    - { property: 'createdAt', format: 'j / M / Y' }
+                    - {
+                          property: "price",
+                          format: "%.2f",
+                          css_class: text-right,
+                      }
+                    - { property: "ean", type: "string" }
+                    - {
+                          property: "image",
+                          type: "image",
+                          base_path: "%app.path.product_images%",
+                      }
+                    - { property: "createdAt", format: "j / M / Y" }
                     - tags
-                filters: ['enabled', 'name', 'price']
+                filters: ["enabled", "name", "price"]
             show:
                 fields:
                     - id
-                    - { property: 'name', css_class: 'large' }
+                    - { property: "name", css_class: "large" }
                     - description
-                    - { property: 'enabled', label: 'Published' }
+                    - { property: "enabled", label: "Published" }
                     - createdAt
                     - price
-                    - { property: 'ean', type: 'string' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: "ean", type: "string" }
+                    - {
+                          property: "image",
+                          type: "image",
+                          base_path: "%app.path.product_images%",
+                      }
                     - features
                     - categories
                     - tags
             form:
                 fields:
-                    - { type: 'group', css_class: 'col-sm-8', label: 'Basic information', icon: 'pencil' }
-                    - { property: 'name', css_class: 'large' }
-                    - { property: 'description', type: 'fos_ckeditor' }
-                    - { type: 'divider' }
-                    - { property: 'categories', type: 'easyadmin_autocomplete' }
-                    - { type: 'group', css_class: 'col-sm-4', label: 'Product Details', icon: 'cube' }
-                    - { property: 'ean', help: 'EAN-13 valid code. Leave empty if unknown.' }
-                    - { property: 'price', type: 'number' }
-                    - { type: 'section', label: 'Advanced Settings', icon: 'warning', help: 'Reserved for administrators use' }
-                    - { property: 'enabled', label: 'Published' }
-                    - { property: 'createdAt' }
-                    - { type: 'group', css_class: 'col-sm-8 new-row' }
-                    - { property: 'features' }
-                    - { type: 'group', css_class: 'col-sm-4' }
-                    - { property: 'tags' }
-                    - { type: 'group', css_class: 'col-sm-4', label: 'Attachments', icon: 'paperclip' }
-                    - { property: 'imageFile', type: 'vich_image', type_options: { required: true } }
+                    - {
+                          type: "group",
+                          css_class: "col-sm-8",
+                          label: "Basic information",
+                          icon: "pencil",
+                      }
+                    - { property: "name", css_class: "large" }
+                    - { property: "description", type: "text_editor" }
+                    - { type: "divider" }
+                    - { property: "categories", type: "easyadmin_autocomplete" }
+                    - {
+                          type: "group",
+                          css_class: "col-sm-4",
+                          label: "Product Details",
+                          icon: "cube",
+                      }
+                    - {
+                          property: "ean",
+                          help: "EAN-13 valid code. Leave empty if unknown.",
+                      }
+                    - { property: "price", type: "number" }
+                    - {
+                          type: "section",
+                          label: "Advanced Settings",
+                          icon: "warning",
+                          help: "Reserved for administrators use",
+                      }
+                    - { property: "enabled", label: "Published" }
+                    - { property: "createdAt" }
+                    - { type: "group", css_class: "col-sm-8 new-row" }
+                    - { property: "features" }
+                    - { type: "group", css_class: "col-sm-4" }
+                    - { property: "tags" }
+                    - {
+                          type: "group",
+                          css_class: "col-sm-4",
+                          label: "Attachments",
+                          icon: "paperclip",
+                      }
+                    - {
+                          property: "image",
+                          type: "file_upload",
+                          type_options:
+                              {
+                                  upload_dir: "public_html/uploads/images/products",
+                                  upload_filename: "[name].[extension]",
+                                  allow_delete: true,
+                              },
+                      }
