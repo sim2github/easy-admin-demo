@@ -29,7 +29,6 @@ easy_admin:
                     - {
                           property: "image",
                           type: "image",
-                          base_path: "%app.path.product_images%",
                       }
                     - { property: "createdAt", format: "j / M / Y" }
                     - tags
@@ -94,7 +93,7 @@ easy_admin:
                       }
                     - {
                           property: "image",
-                          type: "file_upload",
+                          type: "url_file_upload",
                           type_options:
                               {
                                   upload_dir: "public_html/uploads/images/products",

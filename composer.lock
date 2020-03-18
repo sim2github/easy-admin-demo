@@ -1188,12 +1188,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sim2github/EasyAdminBundle.git",
-                "reference": "0f42f33b3914a54af1acfe2b44a48a706d8c1474"
+                "reference": "14bdebe1c9932ddb5837fcf61ba52cc9f3df86c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sim2github/EasyAdminBundle/zipball/0f42f33b3914a54af1acfe2b44a48a706d8c1474",
-                "reference": "0f42f33b3914a54af1acfe2b44a48a706d8c1474",
+                "url": "https://api.github.com/repos/sim2github/EasyAdminBundle/zipball/14bdebe1c9932ddb5837fcf61ba52cc9f3df86c1",
+                "reference": "14bdebe1c9932ddb5837fcf61ba52cc9f3df86c1",
                 "shasum": ""
             },
             "require": {
@@ -1270,9 +1270,9 @@
                 "generator"
             ],
             "support": {
-                "source": "https://github.com/sim2github/EasyAdminBundle/tree/fix-#3037"
+                "source": "https://github.com/sim2github/EasyAdminBundle/tree/file-upload"
             },
-            "time": "2020-03-09T18:52:51+00:00"
+            "time": "2020-03-18T11:34:44+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
